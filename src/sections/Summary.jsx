@@ -83,7 +83,7 @@ const Summary = () => {
 
 
     return (
-        <section className="min-h-screen border-2 border-blue-500 w-full flex flex-col relative">
+        <section className="min-h-screen border-0 border-blue-500 w-full flex flex-col relative" id="home">
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
                 <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hi, I'm Triet <span className="waving-hand">👋</span> and I'm a...</p>
                 <p className="hero_tag text-gray_gradient">Digital Adventurer</p>

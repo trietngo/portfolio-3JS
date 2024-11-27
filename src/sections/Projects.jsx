@@ -25,8 +25,8 @@ const Projects = () => {
     }
 
     return (
-        <section className="c-space my-20">
-            <p className="head-text">My Work</p>
+        <section className="c-space my-20" id="projects">
+            <p className="head-text">Projects and Publications</p>
 
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
 
@@ -59,7 +59,7 @@ const Projects = () => {
 
                         {/* target = blank to open in new tab */}
                         <a href={currentProject.href} target="_blank" rel="noreferrer" className="flex items-center gap-2 cursor-pointer text-white-600">
-                            <p>Check Live Site</p>
+                            <p>Check Project Site</p>
                             <img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow" />
                         </a>
                     </div>

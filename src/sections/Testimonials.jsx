@@ -13,7 +13,7 @@ const Testimonials = () => {
 
                             <div className="client-content">
                                 <div className="flex gap-3">
-                                    <img src={img} alt={name} className="w-12 h-12 rounded-full" />
+                                    {/* <img src={img} alt={name} className="w-12 h-12 rounded-full" /> */}
                                     <div className="flex flex-col">
                                         <p className="font-semibold text-white-800">{name}</p>
                                         <p className="text-white-500 md:text-base text-sm">{position}</p>

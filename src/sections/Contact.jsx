@@ -67,7 +67,7 @@ const Contact = () => {
     }
 
     return (
-        <section className="c-space my-20">
+        <section className="c-space my-20" id="contact">
 
             <div className='relative min-h-screen flex items-center justify-center flex-col'>
                 
@@ -76,8 +76,8 @@ const Contact = () => {
 
                 <div className='contact-container'>
                     <h3 className='head-text'>Let's Connect!</h3>
-                    <p className='text-lg text-white-600 mt-3'>
-                        I'm here to help.
+                    <p className='text-lg text-red-600 mt-3'>
+                        *Note: Under Construction. Sorry for the inconvenience!
                     </p>
 
                     {/* No submission just yet, requires Email.js */}

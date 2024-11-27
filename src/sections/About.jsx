@@ -31,7 +31,13 @@ const About = () => {
 
                     <div className="grid-container">
 
-                        <img src="/assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+                        {/* Rounded pics */}
+
+                        <img src="/assets/avatar.jpg" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain 
+                        
+                        rounded-lg 
+                        aspect-square 
+                        object-cover" />
 
                         <div>
                             <p className="grid-headtext">Hi, I'm Triet!</p>
@@ -98,7 +104,7 @@ const About = () => {
 
                         <div>
                             <p className="grid-headtext">My Passion for Programming</p>
-                            <p className="grid-subtext">I love solving problems, and enjoying myself doing it.</p>
+                            <p className="grid-subtext">I love solving problems, even better when I'm having a great time doing it.</p>
                         </div>
                     </div>
 
