@@ -7,18 +7,23 @@ import Testimonials from './sections/Testimonials.jsx'
 import Contact from './sections/Contact.jsx'
 import Footer from './sections/Footer.jsx'
 import Experience from './sections/Experience.jsx'
+import NavButtons from './sections/NavButtons.jsx'
+import FirefliesBackground from './components/FirefliesBackground.jsx'
 
 const App = () => {
   return (
     <main className="max-w-7xl mx-auto">
-      <NavBar/>
-      <Summary/>
-      <About/>
-      <Projects/>
+      <NavBar />
+      
+      <Summary />
+      <About />
+      <Projects />
       <Testimonials />
       <Experience />
       <Contact />
       <Footer />
+
+      {/* <FirefliesBackground /> */}
     </main>
   )
 }

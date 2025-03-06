@@ -77,7 +77,7 @@ const Contact = () => {
                 <div className='contact-container'>
                     <h3 className='head-text'>Let's Connect!</h3>
                     <p className='text-lg text-red-600 mt-3'>
-                        *Note: Under Construction. Sorry for the inconvenience!
+                        *Note: Under Construction. Click "Send Message" below to directly send me an email. Thank you for understanding!
                     </p>
 
                     {/* No submission just yet, requires Email.js */}
@@ -124,11 +124,22 @@ const Contact = () => {
                             />
                         </label>
 
-                        <button className='field-btn' type='submit' disable={loading}>
+                        {/* Actual button that uses Email.JS */}
+                        {/* <button className='field-btn' type='submit' disable={loading}>
                             {loading ? 'Sending...' : 'Send Message'}
 
                             <img src="/assets/arrow-up.png" alt="arrow-up" className='field-btn_arrow'/>
-                        </button>
+                        </button> */}
+
+                        <a className='field-btn' href="mailto:minhtriet2499@gmail.com">
+
+                            {loading ? 'Sending...' : 'Send Message'}
+                            <button type='submit'>
+
+                                <img src="/assets/arrow-up.png" alt="arrow-up" className='field-btn_arrow'/>
+                            </button>
+                        </a>
+                        
 
                     </form>
                 </div>

@@ -149,6 +149,11 @@ body {
   .social-icon {
     @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
   }
+
+  /* pause on hover */
+  .pause {
+    animation-play-state: paused;
+  }
 }
 
 .waving-hand {
@@ -193,5 +198,16 @@ body {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+/* Fireflies animation */
+@keyframes move {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  100% {
+    transform: translate(100px, 100px)
   }
 }

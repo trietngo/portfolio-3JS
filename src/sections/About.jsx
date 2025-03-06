@@ -40,8 +40,11 @@ const About = () => {
                         object-cover" />
 
                         <div>
-                            <p className="grid-headtext">Hi, I'm Triet!</p>
-                            <p className="grid-subtext">I have an extensive background in marketing, and now I'm bringing those experiences to Computer Science! I used to make cool stuff and now they are here. Enjoy!</p>
+                            <p className="grid-headtext">Hello again, I'm Triet!</p>
+                            <p className="grid-subtext">You probably think that I am some Computer Science nerd, and you would be mostly right! I used to also dabble in Marketing and Digital Media, where I produced entertaining videos, colorful photographs, professional-grade posters, and well-written texts. Nowadays though, I make cool computer programs that you can interact with!
+                            </p>
+                            
+                            <p className="grid-subtext">In short, I like making cool stuff and you can see them on here. Enjoy!</p>
                         </div>
                     </div>
                 </div>
@@ -88,8 +91,8 @@ const About = () => {
                         </div>
 
                         <div>
-                            <p className="grid-headtext">I can work anywhere in the US!</p>
-                            <p className="grid-subtext">I'm currently based in Fremont, CA</p>
+                            <p className="grid-headtext">I can work anywhere in the US. Yes, even Alaska!</p>
+                            <p className="grid-subtext">Being an international student I'm currently based in Fremont, CA</p>
                         </div>
 
                         <Button name="Contact Me" isBeam containerClass="w-full mt-10" />

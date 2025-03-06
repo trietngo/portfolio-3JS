@@ -24,13 +24,13 @@ export const navLinks = [
       name: 'View Site on GitHub',
       href: 'https://github.com/trietngo/portfolio-3JS',
     },
-  ];
+];
   
-  export const clientReviews = [
+export const clientReviews = [
     {
       id: 1,
       name: 'Dylan H.',
-      position: 'Best Friend in College',
+      position: 'Best Friend from College',
       img: 'assets/review1.png',
       review:
         "He's pretty cool, I guess.",
@@ -38,7 +38,7 @@ export const navLinks = [
     {
       id: 2,
       name: 'Zadie M.',
-      position: 'Another Good Friend in College',
+      position: 'Another Great Friend from College',
       img: 'assets/review2.png',
       review:
         'Slayyy',
@@ -59,9 +59,9 @@ export const navLinks = [
       review:
         'Great photographer!',
     },
-  ];
+];
   
-  export const myProjects = [
+export const myProjects = [
     {
       title: 'This Site!',
       desc: 'This is my portfolio site, made with Three.js and React.',
@@ -84,19 +84,25 @@ export const navLinks = [
         },
         {
           id: 2,
+          name: 'GSAP',
+          path: '/assets/threejs.png',
+        },
+        {
+          id: 3,
           name: 'TailwindCSS',
           path: 'assets/tailwindcss.png',
         },
         {
-          id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
+          id: 4,
+          name: 'JavaScript',
+          path: '/assets/javascript.png',
         },
         {
-          id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          id: 5,
+          name: 'GSAP',
+          path: '/assets/gsap.jpg',
         },
+        
       ],
     },
     {
@@ -121,18 +127,23 @@ export const navLinks = [
         },
         {
           id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
+          name: 'Leaflet',
+          path: 'assets/leaflet.png',
         },
         {
           id: 3,
-          name: 'TypeScript',
-          path: '/assets/typescript.png',
+          name: 'JavaScript',
+          path: '/assets/javascript.png',
         },
         {
           id: 4,
-          name: 'Framer Motion',
-          path: '/assets/framer.png',
+          name: 'Material UI',
+          path: '/assets/materialui.png',
+        },
+        {
+          id: 5,
+          name: 'TensorFlow',
+          path: '/assets/tensorflow.png',
         },
       ],
     },
@@ -286,9 +297,9 @@ export const navLinks = [
         },
       ],
     },
-  ];
+];
   
-  export const calculateSizes = (isSmall, isMobile, isTablet) => {
+export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
       deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
       deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
@@ -297,9 +308,9 @@ export const navLinks = [
       ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
       targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
     };
-  };
+};
   
-  export const workExperiences = [
+export const workExperiences = [
     {
       id: 1,
       name: 'IpserLab',
@@ -350,4 +361,27 @@ export const navLinks = [
       icon: '/assets/uniLogo.png',
       animation: 'salute',
     },
-  ];
+];
+
+export const BtnList = [
+  { label: "Home", link: "/", icon: "home", newTab: "false" },
+  { label: "About", link: "/about", icon: "about", newTab: "false" },
+  { label: "Projects", link: "/projects", icon: "projects", newTab: "false" },
+  { label: "Work Experiences", link: "/experiences", icon: "experiences", newTab: "false" },
+  { label: "Contact", link: "/contact", icon: "contact", newTab: "false" },
+
+  {
+    label: "Github",
+    link: "https://github.com/trietngo",
+    icon: "github",
+    newTab: true,
+  },
+
+  {
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/triet-ngo/",
+    icon: "linkedin",
+    newTab: true,
+  },
+
+]
