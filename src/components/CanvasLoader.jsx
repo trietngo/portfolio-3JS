@@ -17,12 +17,12 @@ const CanvasLoader = () => {
         >
             <span className="canvas-loader"></span>
             <p style={{
-                fontSize: 14,
+                fontSize: 18,
                 color: '#F1F1F1',
-                fontWeight: 800,
+                fontWeight: 500,
                 marginTop: 40
             }}>
-                {progress !== 0 ? `${progress.toFixed(2)}%` : 'Loading ...'}
+                {progress !== 0 ? `${progress.toFixed(0)}%` : 'Done!'}
             </p>
         </Html>
     )

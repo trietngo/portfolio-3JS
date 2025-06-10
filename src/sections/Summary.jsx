@@ -7,13 +7,16 @@ import HackerRoom from "../components/HackerRoom.jsx";
 // Leva is a real-time 3D Object Slider Control
 import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
-import { calculateSizes } from "../constants/index.js";
+import { calculateSizes } from '../utils/mediaSizes.js'
 import Target from "../components/Target.jsx";
 import ReactLogo from "../components/ReactLogo.jsx";
 import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
 import SummaryCamera from "../components/SummaryCamera.jsx";
 import Button from "../components/Button.jsx";
+
+import NavButtons from "./NavButtons.jsx";
+import { three } from "maath";
 
 const Summary = () => {
 
@@ -84,6 +87,7 @@ const Summary = () => {
 
     return (
         <section className="min-h-screen border-0 border-blue-500 w-full flex flex-col relative" id="home">
+            
             <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
                 <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">Hi, I'm Triet <span className="waving-hand">👋</span> and I'm a...</p>
                 <p className="hero_tag text-gray_gradient">Digital Adventurer</p>
@@ -94,7 +98,7 @@ const Summary = () => {
                 {/* Init Leva outside Canvas to avoid namespace error */}
                 {/* <Leva /> */}
 
-                <Canvas className="w-full h-full">
+                <Canvas className="w-full h-full relative">
 
                     {/* Load Canvas */}
                     <Suspense fallback={<CanvasLoader/>}>
@@ -133,15 +137,16 @@ const Summary = () => {
 
                                 scale={sizes.deskScale}
                             />
+
                         </SummaryCamera>
 
                         {/* Group of Objects */}
-                        <group>
+                        {/* <group>
                             <Target position={sizes.targetPosition} />
                             <ReactLogo position={sizes.reactLogoPosition} />
                             <Cube position={sizes.cubePosition}/>
                             <Rings position={sizes.ringPosition}/>
-                        </group>
+                        </group> */}
 
                         {/* Add Light */}
                         <ambientLight intensity={1} />
@@ -150,6 +155,8 @@ const Summary = () => {
                     </Suspense>
                     
                 </Canvas>
+
+                {/* <NavButtons className="w-full h-full" /> */}
             </div>
 
             {/* Button to next section */}

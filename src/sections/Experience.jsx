@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber"
-import { workExperiences } from "../constants"
+import { workExperiences } from "../constants/constants"
 import { OrbitControls } from "@react-three/drei"
 import { Suspense } from "react"
 import CanvasLoader from "../components/CanvasLoader"
@@ -8,6 +8,9 @@ import Developer from "../components/Developer"
 const Experience = () => {
   return (
     <section className="c-space my-20">
+        
+        <a className="anchor" id="experience"></a>
+
         <div className="w-full text-white-600">
             <h3 className="head-text">Work Experience</h3>
 
@@ -16,7 +19,7 @@ const Experience = () => {
                 {/* Import 3D Avatar Model */}
                 <div className="work-canvas">
                     <Canvas>
-                        <ambientLight intensity={7} />
+                        <ambientLight intensity={5} />
                         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
                         <directionalLight position={[10, 10, 10]} intensity={1} />
                         <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />

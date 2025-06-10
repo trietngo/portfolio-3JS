@@ -1,7 +1,7 @@
 "use client"
 
 import NavButtonIcons from '../components/NavButtonIcons';
-import { BtnList } from '../constants'
+import { BtnList } from '../constants/constants'
 
 const NavButtons = () => {
 

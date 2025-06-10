@@ -31,7 +31,7 @@ const DemoComputer = (props) => {
   }, [txt])
 
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} scale={4} position={[0, -5, 0]}>
       <group name="Scene">
         <mesh
           name="monitor-screen"

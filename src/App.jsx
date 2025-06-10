@@ -10,20 +10,26 @@ import Experience from './sections/Experience.jsx'
 import NavButtons from './sections/NavButtons.jsx'
 import FirefliesBackground from './components/FirefliesBackground.jsx'
 
+import { SummaryCarousel } from './sections/SummaryCarousel.jsx'
+import PastProjects from './sections/PastProjects.jsx'
+
 const App = () => {
   return (
     <main className="max-w-7xl mx-auto">
       <NavBar />
+
+      {/* <NavButtons /> */}
       
-      <Summary />
+      <SummaryCarousel />
       <About />
       <Projects />
+      <PastProjects />
       <Testimonials />
       <Experience />
       <Contact />
       <Footer />
 
-      {/* <FirefliesBackground /> */}
+      <FirefliesBackground />
     </main>
   )
 }

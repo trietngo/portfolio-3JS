@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState } from 'react';
 import { Float, useGLTF, useTexture } from '@react-three/drei';
+import { a, useSpring } from '@react-spring/three';
 
 const Cube = ({ ...props }) => {
   const { nodes } = useGLTF('models/cube.glb');
@@ -13,7 +14,7 @@ const Cube = ({ ...props }) => {
   const texture = useTexture('textures/cube.png');
 
   const cubeRef = useRef();
-  const [hovered, setHovered] = useState(false);
+  const [hovered, setHovered] = useState(0);
 
   useGSAP(() => {
     gsap
@@ -31,18 +32,29 @@ const Cube = ({ ...props }) => {
       });
   });
 
+  const { scaleSpring } = useSpring({
+    scaleSpring: hovered,
+    config: {
+      mass: 5, tension: 400, friction: 50, precision: 0.0001
+    }
+  })
+
+  const scaler = scaleSpring.to([0, 1], [0.5, 0.6])
+
   return (
     <Float floatIntensity={2}>
       <group position={[9, -4, 0]} rotation={[2.6, 0.8, -1.8]} scale={0.74} dispose={null} {...props}>
-        <mesh
+        <a.mesh
           ref={cubeRef}
           castShadow
           receiveShadow
           geometry={nodes.Cube.geometry}
           material={nodes.Cube.material}
-          onPointerEnter={() => setHovered(true)}>
+          onPointerEnter={() => setHovered(1)}
+          onPointerLeave={() => setHovered(0)}
+          scale={scaler}>
           <meshMatcapMaterial matcap={texture} toneMapped={false} />
-        </mesh>
+        </a.mesh>
       </group>
     </Float>
   );

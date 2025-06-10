@@ -6,23 +6,37 @@ Source: https://sketchfab.com/3d-models/react-logo-76174ceeba96487f9863f974636f6
 Title: React logo
 */
 
+import { a, useSpring } from '@react-spring/three';
 import { useGLTF, Float } from '@react-three/drei'
+import { useState } from 'react';
 
 const ReactLogo = (props) => {
-  const { nodes, materials } = useGLTF('/models/react_logo.glb')
-  return (
-    <Float floatIntensity={1}>
-      <group position={[8, 8, 0]} scale={0.4} {...props} dispose={null}>
-        <mesh
-          geometry={nodes['React-Logo_Material002_0'].geometry}
-          material={materials['Material.002']}
-          position={[0, 0.079, 0.181]}
-          rotation={[0, 0, -Math.PI / 2]}
-          scale={[0.39, 0.39, 0.39]}
-        />
-      </group>
-    </Float>
-  )
+    const { nodes, materials } = useGLTF('/models/react_logo.glb')
+
+    const [hovered, setHovered] = useState(0);
+
+    const { scaleSpring } = useSpring({
+        scaleSpring: hovered,
+        config: {
+            mass: 5, tension: 400, friction: 50, precision: 0.0001
+        }
+    })
+
+    const scaler = scaleSpring.to([0, 1], [0.4, 0.6])
+
+    return (
+      <Float floatIntensity={1}>
+        <a.group position={[8, 8, 0]} scale={scaler} {...props} dispose={null} onPointerEnter={() => setHovered(1)} onPointerLeave={() => setHovered(0)} onClick={() => window.location='/#projects'}>
+          <mesh
+            geometry={nodes['React-Logo_Material002_0'].geometry}
+            material={materials['Material.002']}
+            position={[0, 0.079, 0.181]}
+            rotation={[0, 0, -Math.PI / 2]}
+            scale={[0.39, 0.39, 0.39]}
+          />
+        </a.group>
+      </Float>
+    )
 }
 
 useGLTF.preload('/models/react_logo.glb')

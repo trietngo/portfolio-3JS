@@ -1,8 +1,11 @@
-import { clientReviews } from "../constants"
+import { clientReviews } from "../constants/constants"
 
 const Testimonials = () => {
     return (
         <section className="c-space my-20">
+
+            <a className="anchor" id="testimonials"></a>
+
             <h3 className="head-text">Testimonials</h3>
 
             <div className="client-container">
@@ -16,7 +19,7 @@ const Testimonials = () => {
                                     {/* <img src={img} alt={name} className="w-12 h-12 rounded-full" /> */}
                                     <div className="flex flex-col">
                                         <p className="font-semibold text-white-800">{name}</p>
-                                        <p className="text-white-500 md:text-base text-sm">{position}</p>
+                                        <p className="text-white-600 md:text-base text-sm">{position}</p>
                                     </div>
                                 </div>
 

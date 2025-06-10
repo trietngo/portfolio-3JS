@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Button from '../components/Button';
 
 const Contact = () => {
 
@@ -76,8 +77,8 @@ const Contact = () => {
 
                 <div className='contact-container'>
                     <h3 className='head-text'>Let's Connect!</h3>
-                    <p className='text-lg text-red-600 mt-3'>
-                        *Note: Under Construction. Click "Send Message" below to directly send me an email. Thank you for understanding!
+                    <p className='text-lg text-yellow-600 mt-3'>
+                        *Note: I don't feel like hosting so this section is "Under Construction." Please click "Send Message" below to directly send me an email. Thank you for understanding!
                     </p>
 
                     {/* No submission just yet, requires Email.js */}
@@ -131,15 +132,15 @@ const Contact = () => {
                             <img src="/assets/arrow-up.png" alt="arrow-up" className='field-btn_arrow'/>
                         </button> */}
 
-                        <a className='field-btn' href="mailto:minhtriet2499@gmail.com">
+                        <a className='py-4' href="mailto:minhtriet2499@gmail.com">
 
-                            {loading ? 'Sending...' : 'Send Message'}
-                            <button type='submit'>
+                            <Button name={loading ? 'Sending...' : 'Send Message'} isBeam containerClass="w-full"></Button>
+                            
+                            {/* <button type='submit'>
 
                                 <img src="/assets/arrow-up.png" alt="arrow-up" className='field-btn_arrow'/>
-                            </button>
+                            </button> */}
                         </a>
-                        
 
                     </form>
                 </div>
