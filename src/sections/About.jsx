@@ -87,7 +87,7 @@ const About = () => {
                             <p className="grid-headtext">"Old Timer" Tech Stack</p>
                             <p className="grid-subtext">I consider myself a nostalgic person, and as I grew up with slow computers and limited Internet, my tech stack often reflects the technologies of the yesteryears, where complete, off-line, and self-contained products reigned supreme.</p>
                             <br />
-                            <p className="grid-subtext">As such, while I believe I am comfortable with any stack thrown myway, my favorites would have to be Python and C/C++ for general-purpose development. Throw in React.js and MongoDB too and I'll be right at home!</p>
+                            <p className="grid-subtext">As such, while I believe I am comfortable with any stack thrown my way, my favorites would have to be Python and C/C++ for general-purpose development. Throw in React.js and MongoDB too and I'll be right at home!</p>
                         </div>
 
                     </div>
